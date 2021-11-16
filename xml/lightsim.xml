@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BambooMC>
+  <run number="9001"/>
+
+  <geometry>
+	<material name="VolumeMaterial"/>
+	
+    <detector type="SampleWorldBox">
+      <parameter name="half_x" value="2000"/>
+      <parameter name="half_y" value="2000"/>
+      <parameter name="half_z" value="2000"/>
+    </detector>
+    
+    <detector type="Px4DetectorConstruction" parent="SampleWorldBox"/>
+
+  </geometry>
+
+<!--<physics name="SimpleUnderGroundPhysics"/>-->
+	<physics name="OpticalPhotonPhysics"/>
+
+  <generator name="SimpleGPSGenerator"/>
+
+<!--<analysis name="PandaXPMTAnalysis">
+	<parameter name="EnablePMT" value="1"/>-->
+--  <analysis name="PandaXAnalysis">
+    <parameter name="EnableEnergyDeposition" value="1"/>
+    <parameter name="EnableFlatSurfaceFlux" value="0"/>
+    <parameter name="enable_primary_particle" value="1"/>
+    <parameter name="save_null_event" value="0"/>
+  	</analysis>
+</BambooMC>

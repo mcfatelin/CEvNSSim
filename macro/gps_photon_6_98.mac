@@ -1,0 +1,25 @@
+#for test the transparency
+/gps/particle opticalphoton
+/gps/direction  0 0 1
+#/gps/energy 7.07 eV	#use /gps/ene/mono instead
+/gps/position 0 0 -256 mm
+#/gps/position 0 0 0 mm
+#/gps/time 0
+#/gps/number 1
+#/gps/verbose 1
+
+#/gps/pos/type Point
+#/gps/pos/centre 0 0 0 cm
+#/gps/pos/confine ...
+
+
+#/gps/ang/type iso
+
+/gps/ene/type Mono
+/gps/ene/mono 6.98 eV
+/gps/ene/sigma 0.07 eV
+
+#/control/verbose 1
+#/run/verbose 1
+/tracking/verbose 1
+#/hits/verbose 1

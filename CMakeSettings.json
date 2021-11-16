@@ -1,0 +1,53 @@
+﻿{
+  "configurations": [
+    {
+      "name": "Linux-Debug",
+      "generator": "Unix Makefiles",
+      "configurationType": "Debug",
+      "cmakeExecutable": "/home/gulinhui/nkx/cmake/build/bin/cmake",
+      "remoteCopySourcesExclusionList": [ ".vs", ".git", "out" ],
+      "cmakeCommandArgs": "-DENABLE_DETECTOR_SETS=pandax_iiii",
+      "buildCommandArgs": "",
+      "ctestCommandArgs": "",
+      "inheritEnvironments": [ "linux_x64" ],
+      "remoteMachineName": "528364583;jp.pandax.sjtu.edu.cn (username=gulinhui, port=8023, authentication=Password)",
+      "remoteCMakeListsRoot": "$HOME/PandaX4tLightSimulation_src",
+      "remoteBuildRoot": "$HOME/PandaX4tLightSimulation_build/",
+      "remoteInstallRoot": "$HOME/.vs/${projectDirName}/${workspaceHash}/out/install/${name}",
+      "remoteCopySources": true,
+      "rsyncCommandArgs": "-t --delete --delete-excluded",
+      "remoteCopyBuildOutput": false,
+      "remoteCopySourcesMethod": "rsync",
+      "addressSanitizerRuntimeFlags": "detect_leaks=0",
+      "variables": []
+    },
+    {
+      "name": "Linux-Debug-bl0",
+      "generator": "Unix Makefiles",
+      "configurationType": "Debug",
+      "cmakeExecutable": "/usr/bin/cmake3",
+      "remoteCopySourcesExclusionList": [ ".vs", ".git", "out" ],
+      "cmakeCommandArgs": "-DENABLE_DETECTOR_SETS=pandax_iiii",
+      "buildCommandArgs": "",
+      "ctestCommandArgs": "",
+      "inheritEnvironments": [ "linux_x64" ],
+      "remoteMachineName": "1456192066;bl-0.inpac.sjtu.edu.cn (username=gulinhui, port=22, authentication=Password)",
+      "remoteCMakeListsRoot": "$HOME/PandaX4tLightSim_src",
+      "remoteBuildRoot": "$HOME/PandaX4tLightSim_build",
+      "remoteInstallRoot": "/usr/local",
+      "remoteCopySources": true,
+      "rsyncCommandArgs": "-t --delete --delete-excluded",
+      "remoteCopyBuildOutput": false,
+      "remoteCopySourcesMethod": "rsync",
+      "addressSanitizerRuntimeFlags": "detect_leaks=0",
+      //"remotePrebuildCommand": "source /home/nkx/root/bin/thisroot.sh ; export CC=/usr/bin/gcc ; export CXX=/usr/bin/g++ ;export CPP=/usr/bin/cpp",
+      //"variables": [
+        //{
+          //"name": "CMAKE_CXX_COMPILER",
+          //"value": "/bin/g++",
+          //"type": "STRING"
+        //}
+      //]
+    }
+  ]
+}

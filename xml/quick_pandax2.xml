@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BambooMC>
+  <run number="9001"/>
+  
+  <geometry>
+    <material name="PandaXMaterial"/>
+  
+    <detector type="SampleWorldBox">
+      <parameter name="half_x" value="10000"/>
+      <parameter name="half_y" value="10000"/>
+      <parameter name="half_z" value="10000"/>
+    </detector>
+  
+  <!--  <detector type="PandaXLab">
+      <parameter name="length" value="20*m"/>
+      <parameter name="width" value="15*m"/>
+      <parameter name="height" value="12*m"/>
+      <parameter name="rock_wall_thickness" value="3*m"/>
+      <parameter name="concrete_wall_thickness" value="0.5*m"/>
+      <parameter name="concrete_floor_thickness" value="0.5*m"/>
+    </detector>
+  
+    <detector type="Shield" parent="PandaXLab">
+      <parameter name="counting_flux_in" value="1"/>
+    </detector>
+  
+    <detector type="Cryostat" parent="SampleWorldBox">
+    </detector>-->
+  
+    <detector type="XenonDetector" parent="SampleWorldBox">
+    </detector>   
+  </geometry>
+  
+  <physics name="SimpleUnderGroundPhysics">
+    <parameter name="cutlength" value="0.005*mm"/>
+  </physics>
+  
+  <generator name="SimpleGPSGenerator"/>
+
+  <analysis name="PandaXAnalysis">
+    <parameter name="EnableEnergyDeposition" value="1"/>
+    <parameter name="EnableFlatSurfaceFlux" value="0"/>
+    <parameter name="enable_primary_particle" value="0"/>
+    <parameter name="save_null_event" value="0"/>
+    <parameter name="enable_save_random_seed" value="1"/>
+    <parameter name="enable_decay_chain_splitting" value="1"/>
+  </analysis>
+</BambooMC>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BambooMC>
+  <run number="9001"/>
+  <geometry>
+	<material name="PandaXMaterial"/>
+
+    <detector type="SampleWorldBox">
+      <parameter name="half_x" value="150"/>
+      <parameter name="half_y" value="150"/>
+      <parameter name="half_z" value="200"/>
+    </detector>
+	<!--<detector type="PandaXLab"/>-->
+    <!--<detector type="Cryostat" parent="PandaXLab"/>-->
+    <!--<detector type="Shield" parent="PandaXLab"/>-->
+    <!--<detector type="XenonDetector" parent="Cryostat"/>-->
+    <detector type="XenonDetector" parent="SampleWorldBox"/>
+  </geometry>
+
+	<physics name="OpticalPhotonPhysics"/>
+  
+  <!--<physics name="SimpleUnderGroundPhysics">
+    <parameter name="cutlength" value="0.005*mm"/>
+  </physics>-->
+
+  <!--<generator name="SimpleGPSGenerator"/>-->
+	<generator name="QuantaNestGPSGenerator">
+		<parameter name="Edep" value="10"/> <!--keV--> 
+		<parameter name="Efield" value="400"/> <!--V/cm-->
+		<parameter name="Type" value="nr"/> <!--{nr,er}-->
+	</generator>
+
+  <analysis name="PandaXPMTAnalysis">
+	<parameter name="EnablePMT" value="1"/>
+  </analysis>
+	
+  <!--<analysis name="PandaXAnalysis">
+    <parameter name="EnableEnergyDeposition" value="1"/>
+    <parameter name="EnableFlatSurfaceFlux" value="0"/>
+    <parameter name="enable_primary_particle" value="1"/>
+    <parameter name="save_null_event" value="0"/>
+    <parameter name="enable_save_random_seed" value="1"/>
+    <parameter name="enable_decay_chain_splitting" value="1"/>
+  </analysis>-->
+</BambooMC>

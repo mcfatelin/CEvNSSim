@@ -1,0 +1,2 @@
+在QuantaNestGPSGengerator.cc 里面指定光源形状和位置，似乎是通过Nest模拟来生成光从而进行模拟
+在PandaXMaterial.cc 里面定义材料，初始似乎把气相液相氙的反射参数定义给注释了？
